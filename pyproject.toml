@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windows-gui-automation-toolkit"
+version = "0.1.0"
+description = "Windows GUI automation utilities: window focus, clipboard typing, and workflow helpers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Sung hun kwag", email = "sunghunkwag@gmail.com"}]
+keywords = ["windows", "automation", "pyautogui", "gui", "win32"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+  "pyautogui>=0.9.54",
+  "pyperclip>=1.8.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/sunghunkwag/windows-gui-automation-toolkit"
+Repository = "https://github.com/sunghunkwag/windows-gui-automation-toolkit"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
