@@ -1,29 +1,15 @@
 # Windows GUI Automation Toolkit
 
-A small, practical toolkit for **Windows** GUI automation.
+A standalone Windows GUI automation tool.
+No LLMs. No cloud. No network.
 
-## Features
-- Focus a window by title keyword (Win32 user32 APIs).
-- Type text via clipboard paste (IME / non-ASCII friendly).
-- Helper utilities for hotkeys and copy workflows.
+- Automates mouse, keyboard, windows, and clipboard
+- Image-based button detection and clicking
+- JSON script–driven execution
+- Deterministic and offline
+- Supports retry, timeout, and safety abort
+- Dry-run mode supported
 
-## Install
-```bash
-pip install -U windows-gui-automation-toolkit
-```
+Run:
+python windows_gui_automation_toolkit.py run script.json
 
-## Quick start
-```python
-from windows_gui_automation_toolkit.smart_agent import SmartAgent
-
-agent = SmartAgent()
-agent.wait_for_window("Chrome", timeout=5)
-agent.type_text("https://github.com")
-agent.hotkey("enter")
-```
-
-## Safety
-This project controls keyboard/mouse input. Use on a test machine if possible.
-
-## License
-MIT
